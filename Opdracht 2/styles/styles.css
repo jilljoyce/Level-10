@@ -1,0 +1,75 @@
+body {
+  background-color: #c3cfe2;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.grid__unit {
+  position: relative;
+}
+
+.grid__unit:hover .grid__image {
+  opacity: 0;
+}
+
+.grid__unit:hover .grid__middle {
+  opacity: 1;
+  background-color: #3c3c50;
+}
+
+.grid__image {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.grid__middle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+
+.grid__middle button {
+  padding: 10px 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

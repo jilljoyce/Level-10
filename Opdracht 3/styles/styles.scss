@@ -1,0 +1,61 @@
+@import "./a";
+@import "./before";
+
+@mixin styling-social-media {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-left: 60px;
+    width: 220px;
+    height: 50px;
+    position: relative;
+    transition-duration: 1s;
+}
+
+@mixin hover {
+    &:hover {
+        transform: translateX(-220px);
+    }
+}
+
+body {
+    background-color: #c3cfe2;
+}
+
+.social-media {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    top: 300px;
+    right: -220px;
+
+    &__blog {
+        background-color: #e17b77;
+        @include styling-social-media();
+        @include hover();
+    }
+
+    &__facebook {
+        background-color: #3b5998;
+        @include styling-social-media();
+        @include hover();
+    }
+
+    &__twitter {
+        background-color: #00aced;
+        @include styling-social-media();
+        @include hover();
+    }
+
+    &__github {
+        background-color: #333;
+        @include styling-social-media();
+        @include hover();
+    }
+
+    &__linkedin {
+        background-color: #007bb6;
+        @include styling-social-media();
+        @include hover();
+    }
+}
